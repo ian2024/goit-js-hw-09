@@ -3,7 +3,7 @@ const stopBtnEl = document.querySelector('[data-stop]');
 const bodyEl = document.querySelector('body');
 
 stopBtnEl.disabled = true;
-
+let timerId = null;
 startBtnEl.addEventListener('click', () => {
   timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
